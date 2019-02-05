@@ -1,0 +1,68 @@
+1. what values are by default false in boolean expression in JS?
+
+null
+undefined
+'' the empty string
+0 the number
+
+2. What values are by default true in boolean expression in JS ?
+
+'0' the string
+[] the empty array
+{} the empty object
+
+3. Output
+console.log( Boolean('0') == true );
+console.log( '0' != true );
+console.log( 0 != null );
+console.log( 0 == [] );
+console.log( 0 == false );
+console.log( Boolean(null) == false );
+console.log( null != true );
+console.log( null != false );
+console.log( Boolean(undefined) == false );
+console.log( undefined != true );
+console.log( undefined != false );
+console.log( Boolean([]) == true );
+console.log( [] != true );
+console.log( [] == false );
+console.log( Boolean({}) == true );
+console.log( {} != true );
+console.log( {} != false );
+
+true for all the above
+
+
+4. STRICT MODE
+ECMAScript 5's strict mode is a way to opt in to a restricted variant of JavaScript. 
+Strict mode isn't just a subset: it intentionally has different semantics from normal code. 
+Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, 
+so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. 
+Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
+'use strict';
+
+5. var vs let
+The let statement declares a block scope local variable, optionally initializing it to a value.
+
+let allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used.
+ This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
+
+ Variables declared by let have their scope in the block for which they are defined, as well as in any contained sub-blocks. In this way, let works very much like var. The main difference is that the scope of a var variable is the entire enclosing function:
+
+function varTest() {
+  var x = 1;
+  if (true) {
+    var x = 2;  // same variable!
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+
+function letTest() {
+  let x = 1;
+  if (true) {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}

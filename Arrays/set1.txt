@@ -1,0 +1,35 @@
+1. Associative array in JS
+
+Associative arrays are dynamic objects that the user redefines as needed. 
+When you assign values ​​to keys in a variable of type Array, the array is transformed into an object 
+and it loses the attributes and methods of Array. 
+The length attribute has no effect because the variable is not longer of Array type.
+
+var arr = { "one": 1, "two": 2, "three": 3 }; 
+The content is accessed by keys, whatever the method used to declare the array.
+
+var y = arr["one"];
+An associative array is also an object
+So we can create an associative array with the Object reserved word, then and assign keys and values:
+
+var o = new Object();
+o["one"] = 1;
+Attributes of a JavaScript object are also keys
+
+var oa = new Object();
+oa.one = 1;
+
+An associative array is scanned with for in
+We can not use a simple for loop because the elements are not accessible by an index 
+Keys are assigned to the variable "key", and with the key we access the value.
+
+var arr = { "one" : 1, "two" : 2, "three": 3 };  
+for(var key in arr)
+{
+  var value = arr[key];
+}
+Since the 1.8.5 version of ECMAScript, we can get the list of attributes of an object in a single statement:
+Object.keys(arr)
+
+Object.keys(arr).length
+The keys method returns an array of all the attributes, so keys, and we can apply the length attribute of Array.

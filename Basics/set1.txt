@@ -1,0 +1,83 @@
+Q1. What is JavaScript?
+
+JavaScript ("JS" for short) is a full-fledged dynamic programming language that, when applied to an HTML document,
+can provide dynamic interactivity on websites. Modern JS comes with more features: -
+
+1. Browser Application Programming Interfaces (APIs) — APIs built into web browsers, 
+providing functionality like dynamically creating HTML and setting CSS styles, collecting and manipulating a 
+video stream from the user's webcam, or generating 3D graphics and audio samples.
+
+2. Third-party APIs — Allow developers to incorporate functionality in their sites from other content providers, 
+such as Twitter or Facebook.
+
+3. Third-party frameworks and libraries — You can apply these to your HTML to allow you to
+rapidly build up sites and applications.
+JavaScript became a fully independent language with its own specification called ECMAScript, 
+ECMAScript (or ES)[1] is a trademarked[2] scripting-language specification standardized by Ecma 
+International in ECMA-262 and ISO/IEC 16262. It was created to standardize JavaScript, so as to foster 
+multiple independent implementations. 
+JavaScript has remained the best-known implementation of ECMAScript since the standard was first published, 
+with other well-known implementations including JScript and ActionScript.[3] ECMAScript is commonly used for 
+client-side scripting on the World Wide Web, and it is increasingly being used for writing server applications 
+and services using Node.js.
+
+Q2. Where you can execute JavaScript?
+
+JavaScript can execute not only in the browser, but also on the server, 
+or actually on any device that has a special program called the JavaScript engine.
+A JavaScript engine is a computer program that executes JavaScript (JS) code. The first JS engines were mere interpreters, 
+but all relevant modern engines utilize just-in-time compilation for improved performance.[1]
+JS engines are developed by web browser vendors, and every major browser has one. 
+In a browser, the JS engine runs in concert with the rendering engine via the Document Object Model (DOM).
+
+The use of JS engines is not limited to browsers. For example, the Chrome V8 engine is a core component of the popular Node.js runtime system.
+
+Q3. Name few JS engines
+Different engines have different “codenames”. For example:
+
+V8 – in Chrome and Opera.
+SpiderMonkey – in Firefox.
+“Trident” and “Chakra” for different versions of IE, “ChakraCore” for Microsoft Edge, “Nitro” and “SquirrelFish” for Safari, etc.
+
+Q4. How do JS engine work?
+
+The engine (embedded if it’s a browser) reads (“parses”) the script.
+Then it converts (“compiles”) the script to the machine language.
+And then the machine code runs, pretty fast.
+The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes 
+the data that flows through it, and applies optimizations to the machine code based on that knowledge. When it’s done, scripts run quite fast.
+
+Q5. What can in-browser JS do?
+
+In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+
+For instance, in-browser JavaScript is able to:
+
+Add new HTML to the page, change the existing content, modify styles.
+React to user actions, run on mouse clicks, pointer movements, key presses.
+Send requests over the network to remote servers, download and upload files (so-called AJAX and COMET technologies).
+Get and set cookies, ask questions to the visitor, show messages.
+Remember the data on the client-side (“local storage”).
+
+Q6. What in-browser JS can't do?
+
+Some of the limitation are listed below: - 
+1. JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. 
+It has no direct access to OS system functions.
+
+2. Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, 
+like “dropping” a file into a browser window or selecting it via an <input> tag.
+
+3. There are ways to interact with camera/microphone and other devices, but they require a user’s explicit permission. 
+
+4. Different tabs/windows generally do not know about each other. 
+Sometimes they do, for example when one window uses JavaScript to open the other one. 
+
+Q7. What is Same Origin Policy?
+JavaScript from one page may not access the other if they come from different sites from a different domain, protocol or port).
+This is called the “Same Origin Policy”. To work around that, both pages 
+must contain a special JavaScript code that handles data exchange.
+This limitation is, again, for the user’s safety.
+A page from http://anysite.com which a user has opened must not be able to access another browser tab with 
+the URL http://gmail.com and steal information from there.
+

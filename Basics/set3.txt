@@ -1,0 +1,67 @@
+1. How would you call this function?
+var square1 = function ( number ){
+    return number * number ;
+}
+console.log( square1 ( 10 ) );
+
+2. factorial program in JS
+
+var factorial = function factorial( number ) {
+  if ( number < 2 ) {
+    return 1;
+  }
+
+  return number * factorial( number - 1 );
+};
+
+console.log( factorial(3) );
+
+
+3.  console.log( typeof demo1 === "undefined" );// true
+    console.log( typeof demo1 === undefined ); // false
+    Why???
+    output of typeof is in ""
+
+console.log(typeof 42);
+// expected output: "number"
+
+console.log(typeof 'blubber');
+// expected output: "string"
+
+console.log(typeof true);
+// expected output: "boolean"
+
+console.log(typeof declaredButUndefinedVariable);
+// expected output: "undefined";
+
+4.
+
+var foo = 0;
+
+// typeof foo;
+// "number"
+...
+
+// Somewhere later in your code, you need to update `foo`
+// with a new value derived from an input element
+
+foo = document.getElementById("foo-input").value;
+
+// If you were to test `typeof foo` now, the result would be `string`
+// This means that if you had logic that tested `foo` like:
+
+if ( foo === 1 ) {
+
+  importantTask();
+
+}
+
+foo will be string
+
+// You can preempt issues by using smart coercion with unary + or - operators:
+
+foo = +document.getElementById("foo-input").value;
+//    ^ unary + operator will convert its right side operand to a number
+
+// typeof foo;
+// "number"

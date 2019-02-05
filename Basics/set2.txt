@@ -1,0 +1,50 @@
+Q1. Difference between internal and external script?
+
+The simplest scripts are put into HTML(internal). 
+More complex ones reside in separate files.(external)
+
+The benefit of a separate file is that the browser will download it and store it in its cache.Other pages that
+reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.
+That reduces traffic and makes pages faster.
+
+Q2. Which script is preferred in below snippet?
+<script src="file.js">
+  alert(1); // the content is ignored, because src is set
+</script>
+
+Q3. Is semicolon mandatory in JS?
+
+No. A semicolon may be omitted in most cases when a line break exists.
+
+This would also work:
+
+ alert('Hello')
+alert('World')
+
+Here, JavaScript interprets the line break as an “implicit” semicolon. This is called an automatic semicolon insertion.
+
+Q4. Output of below code: - 
+There are cases when a newline does not mean a semicolon. For example:
+
+alert( 3+
+2+
+5)
+
+The code outputs 10 because JavaScript does not insert semicolons here. 
+It is intuitively obvious that if the line ends with a plus "+", then it is an “incomplete expression”, 
+so the semicolon is not required. And in this case that works as intended.
+
+Q5. Output
+alert("There will be an error")
+
+[1, 2].forEach(alert)
+
+The error in the no-semicolon variant occurs because JavaScript does not assume a semicolon before square brackets [...].
+
+So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement.
+ Here’s how the engine sees it:
+
+ alert("There will be an error")[1, 2].forEach(alert)
+But it should be two separate statements, not one. 
+Such a merging in this case is just wrong, hence the error. This can happen in other situations.
+Javascript never ends a statement if the next token is an infix or bracket operator.
