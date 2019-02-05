@@ -66,3 +66,12 @@ function letTest() {
   }
   console.log(x);  // 1
 }
+
+6. function sayHi( message = 'Hello' ) {
+    console.log( message );
+}
+
+sayHi();
+sayHi(undefined);
+sayHi(null);
+sayHi('Hello World');

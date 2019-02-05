@@ -1,0 +1,21 @@
+1. Replace character a by 4 in the below string
+var str = "An apple was eaten";
+str.replace(/a/gi, "4"); 
+
+2. /* 
+  replace all numbers with x's
+*/
+var str1 = "My phone number is 551-555-5555";
+console.log(str1.replace(/[0-9]/gi, "x")); // My phone number is xxx-xxx-xxxx
+
+3. /* 
+  get all words that only start with a letter
+*/
+var str = "Hey 4get these words 3_please";
+var wor = str.match(/\b[a-z]+/gi); // ["Hey", "these", "words"]
+
+4. /* 
+  find the position in the string where the character A is exactly 2 spaces away from B
+*/
+var str = "ABxxAxxB"
+var pos = str.search(/A..B/gi); // 4
