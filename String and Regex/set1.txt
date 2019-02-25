@@ -1,0 +1,82 @@
+1. Write a function secondIndexOf, taking two strings and determining the second occurrence of the second string 
+in the first string. If the search string does not occur twice, -1 should 
+be returned. secondIndexOf("White Rabbit", "it") should return 10.
+var secondIndexOf = function(s1, s2) {
+  return s1.indexOf(s2, s1.indexOf(s2) + 1);
+};
+
+2. Write a function firstWord, taking a string and returning the first word in that string. 
+The first word are all characters up to the first space. firstWord("see and stop") should return "see".
+
+var firstWord = function (str) {
+  return str.substr(0, str.indexOf(" "));
+}
+3. Write a function normalize, that replaces "-" with "/" in a date string. 
+normalize("20-05-2017") should return "20/05/2017".
+
+var normalize = function (str) {
+var newStr= str.replace(/-/gi,"/");
+return newStr;
+}
+
+4. Write a function hypotenuse that calculates the length of the hypotenuse of a right triangle. 
+The length of the two legs is passed to the function. Tip: In a right triangle the Pythagorean theorem is valid.
+ If a and b are the lengths of the two legs and c is the length of the hypotenuse,
+  the following is true: a² + b² = c². Since 3² + 4² = 5² applies, hypotenuse(3,4) should return 5.
+
+  var hypotenuse = function( num1, num2 ){
+return Math.sqrt( Math.pow(num1,2) + Math.pow(num2, 2 ));
+}
+
+5. Write a function midrange, that calculates the midrange of 3 numbers. 
+The midrange is the mean of the smallest and largest number. midrange(3, 9, 1) should return (9+1)/2 = 5.
+
+var midrange = function(a, b, c) {
+  var min = Math.min(a, b, c);
+  var max = Math.max(a, b, c);
+  return (min + max) / 2;
+};
+
+6. Write a function area that calculates the area of a circle. The function is given the radius of the circle. area(1) should return π and area(2) should return 4 * π.
+var area = function ( radius ) {
+return Math.PI * Math.pow( radius, 2);
+}
+
+7.
+
+Write a function round100 that rounds a number to the nearest hundred. round100(1749) should return 1700 and round100(856.12) should return 900.
+
+var round100 = function (num ){
+return Math.round(num/100)*100
+
+}
+
+8. Write a function dice that returns like a dice a random number between 1 and 6.
+var dice = function () {
+return Math.ceil(Math.random() * 6);
+}
+
+9. Write a function nand that takes two Boolean values. If both values are true, the result should be false. In the other cases the return should be true. The call nand(true, true) should return false. The calls nand(true, false), nand(false, true) and nand(false, false) should return true.
+var nand = function (a,b) {
+return !(a && b);
+}
+
+10. XOR in JS
+
+var xor = function (foo, bar) {
+return (foo ? !bar : bar );
+}
+
+11. Write a function equals that checks 3 values for strict equality. The function should only return true if all 3 values are equal. equals(1, 1, 1) should return true and equals(1, 2, 1) should return false.
+var equals = function ( a, b, c) {
+
+return a === b ? a === c? true : false: false;
+}
+
+
+12. Write a function unequal that checks 3 values for strict inequality. The function should return true if all three parameters are strict unequal. Otherwise false. The call unequal(1, 2, 3) should return true and unequal(1, 1, 2) should return false.
+
+var unequal = function ( a, b, c ) {
+return a !== b ?
+  (b !== c ?(a !== c ? true : false) : false ) : false;
+}

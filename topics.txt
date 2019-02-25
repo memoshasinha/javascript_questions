@@ -6,3 +6,8 @@ Destructing and Rest/Spread
 Template Strings
 Classes
 Promises and Async/Await
+Difference type of character encoding
+
+Pratice 
+
+1. https://www.jshero.net/en/success.html

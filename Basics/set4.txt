@@ -75,3 +75,52 @@ sayHi();
 sayHi(undefined);
 sayHi(null);
 sayHi('Hello World');
+
+
+7.
+var a = -1;
+if( a ){
+    console.log("true");
+}
+else{
+    console.log("false");
+}
+
+var a1 = '0';
+if( a1 ){
+    console.log("true");
+}
+else{
+    console.log("false");
+}
+var a = 1;
+if( a ){
+    console.log("true");
+}
+else{
+    console.log("false");
+}
+
+var a1 = 0;
+if( a1 ){
+    console.log("true");
+}
+else{
+    console.log("false");
+}
+
+The construct if ( Expression ) Statement will coerce the result of evaluating the Expression to a boolean using the abstract method ToBoolean for which the ES5 spec defines the following algorithm:
+Undefined	false
+Null	false
+Boolean	The result equals the input argument (no conversion).
+Number	The result is false if the argument is +0, −0, or NaN;
+otherwise the result is true.
+String	The result is false if the argument is the empty String (its length is zero);
+otherwise the result is true.
+Object	true.
+This is the formula JavaScript uses to classify values as truthy (true, "potato", 36, [1,2,4] and {a:16}) or falsey (false, 0, "", null and undefined).
+
+Now we can see why, in the introductory example, if ([0]) allows entry to the subsequent block: an array is an object and all objects coerce to true.
+
+10/0
+output is Infinity

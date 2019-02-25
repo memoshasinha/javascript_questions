@@ -1,0 +1,52 @@
+1. Get Object property details for cat object
+class Cat{
+  constructor(name,color){
+    this.name = name;
+    this.color = color;
+  }
+}
+var cat = new Cat('Memosha','Gabdu');
+Object.getOwnPropertyDescriptor(cat,'name')
+
+Output
+Object {
+value: Memosha
+writable: true
+enumerable: true
+configurable: true
+}
+
+
+2. Make property writable as false
+Object.defineProperty(cat,'name',{writable:false});
+
+3. What error will you get if you try to assign value to an object's readonly property?
+ Cannot assign to read only property 'name' of object 
+
+4. Assume the below object
+var cat = {
+    name :
+    {
+        first: 'Fluffy',
+        last: 'dksjfhg'
+    },
+    color{
+        'White'
+    }
+};
+Object.defineProperty(cat,'name',{writable:false});
+cat.name.first = 'Scratchy';
+display(cat.name);
+What will be Output?
+Object{
+    first: Scratchy,
+    last: dksjfhg
+}
+
+5. If we still want to freeze the object what we can do?
+Object.freeze(cat.name);
+cat.name.first = 'Scratchy';
+display(cat.name);
+What will be Output?
+ Cannot assign to read only property 'name' of object 
+

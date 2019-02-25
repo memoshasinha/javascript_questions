@@ -1,0 +1,40 @@
+caniuse.com - tells which tags are supported by which browser.
+Difference type of character encoding
+
+#para1{
+    color:blue;
+}
+this will make text color blue for all html element with id as para1
+
+nesting
+
+div p {
+
+}
+div is parent
+
+
+select multiple element
+
+h1, h2, p{
+
+}
+
+<p class="specific"></p>
+<p class="specific" id="moreSpecific"></p>
+
+#moreSpecific{
+    background:red;
+}
+
+.specific{
+    background:black;
+}
+p{
+    background:blue;
+}
+
+id has higher priority than class
+!importnant has highest 
+
+CSS preprocessors
