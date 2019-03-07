@@ -1,0 +1,1 @@
+Put curly braces starting from same line.

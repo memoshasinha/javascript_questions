@@ -1,0 +1,11 @@
+Hoisting is javascript's default behaviour of moving all declarations to the top of the current scope.
+All var declarations go to the top of your scope.
+Initialiszation is not necessary
+
+function are first class objects which means we can assign them to variables
+
+//variables go firstvar x= 10;
+
+//functions next
+
+//run code

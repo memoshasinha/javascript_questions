@@ -1,0 +1,27 @@
+== says that if variables are two different types , it will convert then to the same types
+
+var x=1;
+var y='1';
+
+if( x== y) console.log('equals');
+
+var x=0;
+var y=false;
+
+if( x== y) console.log('equals');
+
+
+=== check if same type and if equals
+
+var x=0;
+var y=false;
+
+if( x=== y) console.log('equals');
+else console.log('non equals);
+
+//non equals
+
+So use === by default
+
+To see if a var exists, use typeof undefined
+if( typeof x !== undefined)

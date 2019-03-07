@@ -1,0 +1,7 @@
+Linter scans your code to detect potential problem and error.
+
+Setup JSHint in Visual Studio code
+Install globally npm install -g jshint.
+put the jshint in env variable path in windows and in .bash_profile unix/mac
+
+

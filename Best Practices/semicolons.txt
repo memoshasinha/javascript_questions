@@ -1,0 +1,72 @@
+Semicolons
+====================================================================
+
+JS compiler automatically inserts Semicolons based on 3 rules: - 
+
+1. When as a script ot module is parsed from left to right a token( called the offending token) is encountered that is not 
+allowed by any production of the grammar.
+a) The offending token is separated from the previous token by atleast one line terminator
+
+Example 
+var a =12
+var b =13
+
+JS compiler converts 
+var a=12;
+var b=13;
+
+b) If the offending token is }
+if(a){
+    console.log(a);
+}
+
+Issue with rule 1
+var c= a+b
+
+['menu','item'].forEach(function(element){})
+
+This will not insert semicolon after a+b.
+
+
+2. When as a script ot module is parsed from left to right , the end of the stream is encountered, then semicolon is automatically inserted.
+
+console.log(a)
+becomes
+console.log(a);
+
+3. When a token is encountered that is allowed by some production of grammar, but the production
+is a restricted production and the token would be the first token of a restricted production
+and the restricted token is separated from the previous token by atleast one line terminator
+then semicolon is automatically inserted before the restricted token.
+
+restricted production means
+continue, break, return, throw
+
+
+if(a){
+    return
+    {
+        hi:'hello'
+    }
+}
+
+becomes
+
+if(a){
+    return ;
+    {
+        hi:'hello'
+    }
+}
+
+To solve This
+if(a){
+    return {
+        hi:'hello'
+    }
+}
+
+
+Try to use semicolons in conjunction with JSHint (or ESLint) to prevent potential issues.
+
+
